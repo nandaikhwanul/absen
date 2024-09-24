@@ -1,0 +1,33 @@
+### Register a new user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "nip": "11",
+    "nama": "nanda",
+    "email": "nandanadlirin@gmail.com",
+    "password": "123",
+    "confPassword": "123"
+}
+
+### Login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "nandanadlirin@gmail.com",
+    "password": "123"
+}
+
+### Get all users
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWEiOiJuYW5kYSIsImVtYWlsIjoibmFuZGFuYWRsaXJpbkBnbWFpbC5jb20iLCJpYXQiOjE3MjcwMjE1NTAsImV4cCI6MTcyNzAyMTYxMH0.Yumt2cqHqg7VmCzgSudAizis9CeM0gJ3iGoCR9y6c-U
+
+### Refresh access token
+GET http://localhost:5000/token
+
+### Logout user
+DELETE http://localhost:5000/logout
+
+### Search users
+GET http://localhost:5000/search?search_query=nanda&page=0&limit=10
